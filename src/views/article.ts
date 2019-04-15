@@ -4,7 +4,7 @@ export interface Article {
   commentNum?: number;
   content: string;
   coverType: string;
-  covers:  ;
+  covers: number[];
 }
 
 
