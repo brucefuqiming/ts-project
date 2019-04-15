@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="92px" viewBox="0 0 80 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>其他 copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <path d="M47.7622649,54.9087634 C46.8630988,55.6972093 43.9873349,57.9661015 39.1349731,61.7154402 L39.1349722,61.7154391 C35.3477266,64.6417803 32.8043984,68.8896309 32.0133647,73.6099029 C31.0642504,79.2734764 30.3931288,82.1052632 30,82.1052632 C29.60403,82.1052632 28.9158275,79.2323971 27.9353925,73.4866651 L27.9353931,73.486665 C27.1406576,68.829205 24.6391221,64.6349377 20.918908,61.7222852 C15.1256314,57.1865779 12.228993,54.9187243 12.228993,54.9187243 C12.228993,54.9187243 8.6938222,51.4750413 7.22409046,49.526656 C2.72089919,44.2790088 9.13250276e-16,37.4572544 0,30 C-2.02906125e-15,13.4314575 13.4314575,3.04359188e-15 30,0 C46.5685425,-3.04359188e-15 60,13.4314575 60,30 C60,37.5001172 57.2477325,44.357408 52.6980827,49.6169871 C51.2448321,51.5276555 49.5942718,53.3023435 47.7622649,54.9087634 Z" id="path-2"></path>
+        <filter x="-25.0%" y="-18.3%" width="150.0%" height="135.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-4" cx="27.2580645" cy="27.2580645" r="25.2580645"></circle>
+        <circle id="path-6" cx="29" cy="29" r="29"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-743.000000, -3053.000000)">
+            <g id="其他-copy-5" transform="translate(743.000000, 3053.000000)">
+                <g id="其他" transform="translate(10.000000, 6.000000)">
+                    <g id="选中高亮-icon">
+                        <ellipse id="Oval-2" fill="#999999" filter="url(#filter-1)" cx="30" cy="82" rx="6.5" ry="3"></ellipse>
+                        <g id="Combined-Shape">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <rect id="Rectangle-6-Copy-3" stroke="#FFFFFF" stroke-width="3" fill="#FFFFFF" x="1.5" y="1.5" width="57" height="57" rx="28.5"></rect>
+                        <g id="Group-Copy" transform="translate(3.000000, 3.000000)">
+                            <path d="M0,27 C0,12.0883118 12.0850331,0 27,0 L27,0 C41.9116882,0 54,12.0850331 54,27 L54,27 C54,41.9116882 41.9149669,54 27,54 L27,54 C12.0883118,54 0,41.9149669 0,27 L0,27 Z" id="Rectangle-6" stroke="#F67E42" stroke-width="2" fill-opacity="0.920000017" fill="#FFFFFF"></path>
+                            <mask id="mask-5" fill="white">
+                                <use xlink:href="#path-4"></use>
+                            </mask>
+                            <g id="Oval"></g>
+                            <g id="Group" mask="url(#mask-5)">
+                                <g transform="translate(-2.000000, -2.000000)">
+                                    <g id="Group-109-Copy-2" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <mask id="mask-7" fill="white">
+                                            <use xlink:href="#path-6"></use>
+                                        </mask>
+                                        <g id="Mask"></g>
+                                        <g id="Group-109" mask="url(#mask-7)">
+                                            <g transform="translate(2.416667, 4.833333)">
+                                                <path d="M36.25,1.20833333 L38.6666667,1.20833333" id="Path-42" stroke="#FFE81A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M37.4583333,2.41666667 L37.4583333,0" id="Path-42" stroke="#FFE81A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <g id="Group-108" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, 3.625000)">
+                                                    <rect id="Rectangle-77" fill="#C0D3FF" x="25.375" y="1.20833333" width="3.625" height="14.5"></rect>
+                                                    <g id="Group-106" transform="translate(24.770833, 0.794610)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                                        <path d="M1,0.430934295 L3.83333333,0.430934295 C4.38561808,0.430934295 4.83333333,0.878649545 4.83333333,1.43093429 L4.83333333,4.05593429 L0,4.05593429 L0,1.43093429 C-6.76353751e-17,0.878649545 0.44771525,0.430934295 1,0.430934295 Z" id="Rectangle-73"></path>
+                                                        <rect id="Rectangle-73-Copy" x="0" y="4.05593429" width="4.83333333" height="3.625"></rect>
+                                                        <rect id="Rectangle-73-Copy-2" x="0" y="7.68093429" width="4.83333333" height="3.625"></rect>
+                                                        <rect id="Rectangle-73-Copy-3" x="0" y="11.3059343" width="4.83333333" height="3.625"></rect>
+                                                    </g>
+                                                    <circle id="Oval-41-Copy-2" stroke="#000000" stroke-width="1.5" fill="#C0B9AE" stroke-linecap="round" stroke-linejoin="round" cx="45.3125" cy="42.8958333" r="5.4375"></circle>
+                                                    <circle id="Oval-41-Copy-3" stroke="#000000" stroke-width="1.5" fill="#C0B9AE" stroke-linecap="round" stroke-linejoin="round" cx="6.04166667" cy="42.8958333" r="5.4375"></circle>
+                                                    <g id="Group-107" transform="translate(0.604167, 34.437500)" fill="#C0B9AE" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                                        <path d="M17.3455735,0 L18.125,0 C20.9353773,-5.16257931e-16 23.3550677,1.98367161 23.906228,4.73947327 L26.5833333,18.125 L0,18.125 L10.8943335,3.26909069 C12.4013341,1.21408987 14.7972251,-2.19641127e-15 17.3455735,-2.66453526e-15 Z" id="Rectangle-75-Copy-2"></path>
+                                                        <path d="M35.0610677,0 L35.612931,0 C38.2877565,-4.91357474e-16 40.7856071,1.33680908 42.2693333,3.56239843 L51.9777344,18.125 L26.6027344,18.125 L29.2798397,4.73947327 C29.831,1.98367161 32.2506904,5.16257931e-16 35.0610677,0 Z" id="Rectangle-75-Copy-3"></path>
+                                                    </g>
+                                                    <polygon id="Rectangle-74" stroke="#000000" stroke-width="1.5" fill="#EFEFEF" stroke-linecap="round" stroke-linejoin="round" points="23.5625 19.3333333 30.8125 19.3333333 33.2291667 47.125 21.1458333 47.125"></polygon>
+                                                    <polygon id="Path-69" fill="#3A3AC8" points="16.9484784 24.1531815 21.0710778 20.5728758 32.9865752 20.4156374 36.6597852 24.1064951 37.7782921 23.9621915 39.2708333 21.4300069 34.4011926 15.8163138 19.9726085 15.6948482 17.2637703 18.9404666 15.1041667 21.2929791 15.4295629 22.8188785"></polygon>
+                                                    <path d="M34.257331,15.7253609 L34.257331,15.7083333 L27.1875,15.7083333 M27.1875,20.4930892 L33.0166708,20.4930892 L37.128351,24.1666667 L39.2708333,21.6291667 L34.2717079,15.7083333 M21.3583292,20.4930892 L27.1875,20.4930892 M27.1875,15.7083333 L25.1675483,15.7083333 L20.117669,15.7083333 L15.1041667,21.6291667 L17.246649,24.1666667 L21.3583292,20.4930892" id="Combined-Shape" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M26.3077404,37.4583333 L28.0672596,37.4583333 C31.5107028,37.4583333 34.5678136,39.6617741 35.656726,42.9285112 L38.6666667,51.9583333 L15.7083333,51.9583333 L18.718274,42.9285112 C19.8071864,39.6617741 22.8642972,37.4583333 26.3077404,37.4583333 Z" id="Rectangle-75-Copy" stroke="#000000" stroke-width="1.5" fill="#C0B9AE" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M27.1875,24.1531815 L27.1875,26.6775298 M27.1875,29.1780048 L27.1875,34.9948473" id="Path-72" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                                <polygon id="Star-2-Copy" stroke="#FFB81A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(42.438262, 31.563262) rotate(-45.000000) translate(-42.438262, -31.563262) " points="42.4382621 31.768957 41.156631 32.8448931 42.2325672 31.5632621 41.156631 30.281631 42.4382621 31.3575672 43.7198931 30.281631 42.643957 31.5632621 43.7198931 32.8448931"></polygon>
+                                                <polygon id="Star-2" stroke="#FFE81A" stroke-width="1.5" fill="#FFE81A" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" transform="translate(14.716726, 12.022612) rotate(-45.000000) translate(-14.716726, -12.022612) " points="14.7167258 13.1979355 11.7262534 15.013084 13.5414018 12.0226115 11.7262534 9.0321391 14.7167258 10.8472875 17.7071982 9.0321391 15.8920498 12.0226115 17.7071982 15.013084"></polygon>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <circle id="Oval-33-Copy-9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" cx="29" cy="29" r="29"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

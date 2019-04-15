@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>icon _place_</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-32.9331293%" y1="-27.8357331%" x2="66.5415667%" y2="95.1337761%" id="linearGradient-1">
+            <stop stop-color="#F77800" offset="0%"></stop>
+            <stop stop-color="#FF6F6F" offset="100%"></stop>
+        </linearGradient>
+        <path d="M5.29201707,0.0035612312 C2.55894015,0.101102215 0.288427326,2.26995467 0.026119634,5.0383973 C-0.0274701096,5.59208582 0.00355553139,6.12856123 0.0994529673,6.64208582 L0.0994529673,6.64208582 C0.0994529673,6.64208582 0.107914506,6.70233172 0.136119634,6.81708582 C0.220735019,7.20151205 0.347658095,7.57446287 0.505606813,7.92446287 C1.05560681,9.24987271 2.3276581,11.4674957 5.18201707,13.8802006 C5.35688886,14.0293809 5.61355553,14.0293809 5.79124784,13.8802006 C8.64560681,11.4703645 9.9176581,9.25274156 10.4704786,7.92159402 C10.6312478,7.57159402 10.7553504,7.20151205 10.8399658,6.81421697 C10.8653504,6.70233172 10.8766325,6.63921697 10.8766325,6.63921697 L10.8766325,6.63921697 C10.9415042,6.29495467 10.9753504,5.94208582 10.9753504,5.58061041 C10.9753504,2.43061041 8.41150425,-0.108324015 5.29201707,0.0035612312 Z M5.48663245,8.35765959 C4.01432476,8.35765959 2.82124784,7.144135 2.82124784,5.64659402 C2.82124784,4.14905303 4.01432476,2.93552844 5.48663245,2.93552844 C6.95894015,2.93552844 8.15201707,4.14905303 8.15201707,5.64659402 C8.15201707,7.144135 6.95894015,8.35765959 5.48663245,8.35765959 Z" id="path-2"></path>
+        <filter x="-63.8%" y="-35.7%" width="227.6%" height="200.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.450980392   0 0 0 0 0.450980392  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="时间线-01-时间描述共存" transform="translate(-153.000000, -237.000000)" fill-rule="nonzero">
+            <g id="时间线1" transform="translate(155.000000, 160.000000)">
+                <g id="Group-7" transform="translate(2.000000, 76.000000)">
+                    <g id="icon-_place_h-copy-2" transform="translate(0.000000, 3.000000)">
+                        <g id="Shape-Copy">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

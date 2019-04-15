@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="170px" height="170px" viewBox="0 0 170 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>无分类</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="九大类icon-copy-2" transform="translate(-423.000000, -201.000000)">
+            <g id="无分类" transform="translate(423.000000, 201.000000)">
+                <rect id="Rectangle-6" fill="#F3F3F5" x="0" y="0" width="170" height="170"></rect>
+                <g id="Group-14">
+                    <g>
+                        <circle id="Mask-Copy" fill="#F3F3F5" cx="85" cy="85" r="85"></circle>
+                        <g id="Group-5" opacity="0.8" transform="translate(29.611328, 36.298862)" stroke-width="4" stroke="#000000">
+                            <g id="Group-11">
+                                <g id="Group-3" transform="translate(0.069005, 0.143406)">
+                                    <path d="M71.5215478,26.110016 L32.4767463,26.110016" id="Triangle-2" stroke-linecap="round" stroke-linejoin="round" transform="translate(51.999147, 26.573112) rotate(-15.000000) translate(-51.999147, -26.573112) "></path>
+                                    <g id="Group-13" transform="translate(19.610988, 19.811112) rotate(-134.000000) translate(-19.610988, -19.811112) translate(3.110988, 9.311112)">
+                                        <path d="M6.30060809,-1.55298531 L20.7808934,22.5808236" id="Triangle-2-Copy-5" stroke-linecap="round" stroke-linejoin="round" transform="translate(13.540751, 10.513919) rotate(-75.000000) translate(-13.540751, -10.513919) "></path>
+                                        <circle id="Oval-Copy-19" fill="#B3EAA8" transform="translate(25.224119, 8.206708) rotate(-15.000000) translate(-25.224119, -8.206708) " cx="25.2241193" cy="8.206708" r="6.16423949"></circle>
+                                    </g>
+                                    <path d="M78.9450152,18.4451024 L98.4674159,50.982437" id="Triangle-2-Copy" stroke-linecap="round" stroke-linejoin="round" transform="translate(88.706216, 34.713770) rotate(-15.000000) translate(-88.706216, -34.713770) "></path>
+                                    <polyline id="Triangle-2-Copy-2" stroke-linecap="round" stroke-linejoin="round" transform="translate(55.751141, 74.346474) rotate(-300.000000) translate(-55.751141, -74.346474) " points="45.9899406 58.077807 45.9899406 58.077807 65.5123413 90.6151416"></polyline>
+                                    <polyline id="Triangle-2-Copy-3" stroke-linecap="round" stroke-linejoin="round" transform="translate(79.712985, 63.141720) rotate(-75.000000) translate(-79.712985, -63.141720) " points="60.1905843 79.4103868 79.712985 46.8730523 79.712985 46.8730523 99.2353858 79.4103868"></polyline>
+                                    <circle id="Oval-Copy-11" fill="#FFFFFF" transform="translate(38.554712, 29.694064) rotate(-15.000000) translate(-38.554712, -29.694064) " cx="38.554712" cy="29.6940639" r="7.56019551"></circle>
+                                    <circle id="Oval-Copy-16" fill="#BDD9EA" transform="translate(47.814023, 88.342748) rotate(-15.000000) translate(-47.814023, -88.342748) " cx="47.8140227" cy="88.3427484" r="7.10275782"></circle>
+                                    <circle id="Oval-Copy-13" fill="#F18484" transform="translate(65.167325, 58.980823) rotate(-15.000000) translate(-65.167325, -58.980823) " cx="65.167325" cy="58.980823" r="11.8764816"></circle>
+                                    <circle id="Oval-Copy-14" fill="#98D686" transform="translate(101.248059, 47.876733) rotate(-15.000000) translate(-101.248059, -47.876733) " cx="101.248059" cy="47.8767333" r="7.42402406"></circle>
+                                    <circle id="Oval-Copy-17" fill="#FFE10B" transform="translate(92.155524, 86.556382) rotate(-15.000000) translate(-92.155524, -86.556382) " cx="92.1555236" cy="86.5563815" r="7.4452713"></circle>
+                                    <circle id="Oval-Copy-12" fill="#BDDCF0" transform="translate(75.066979, 20.502906) rotate(-15.000000) translate(-75.066979, -20.502906) " cx="75.0669791" cy="20.5029055" r="6.20392253"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

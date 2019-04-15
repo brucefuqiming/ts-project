@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="51px" viewBox="0 0 44 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>选中高亮-icon copy 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <path d="M19.904906,22.7635054 C19.8132239,22.843898 19.6701675,22.9627694 19.4757367,23.1201195 L19.4757381,23.1201213 C16.3352502,25.6616743 14.086653,29.1381164 13.0564658,33.0446328 C12.9514262,33.4429478 12.8659376,33.6421053 12.8,33.6421053 C12.7327968,33.6421053 12.6445498,33.435229 12.5352591,33.0214766 L12.535259,33.0214766 C11.4773799,29.0165623 9.13967611,25.4670805 5.87811583,22.91352 C5.75377009,22.8161665 5.69159721,22.7674897 5.69159721,22.7674897 C5.69159721,22.7674897 4.27752888,21.3900165 3.68963618,20.6106624 C1.88835968,18.5116035 0.8,15.7829018 0.8,12.8 C0.8,6.172583 6.172583,0.8 12.8,0.8 C19.427417,0.8 24.8,6.172583 24.8,12.8 C24.8,15.8000469 23.699093,18.5429632 21.8792331,20.6467948 C21.2979328,21.4110622 20.6377087,22.1209374 19.904906,22.7635054 Z" id="path-2"></path>
+        <filter x="-68.7%" y="-41.1%" width="237.5%" height="198.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M2,12.8 C2,6.8353247 6.83401323,2 12.8,2 L12.8,2 C18.7646753,2 23.6,6.83401323 23.6,12.8 L23.6,12.8 C23.6,18.7646753 18.7659868,23.6 12.8,23.6 L12.8,23.6 C6.8353247,23.6 2,18.7659868 2,12.8 L2,12.8 Z" id="path-4"></path>
+    </defs>
+    <g id="完成稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标" transform="translate(-118.000000, -3370.000000)">
+            <g id="选中高亮-icon-copy-10" transform="translate(118.000000, 3370.000000)">
+                <g id="Group">
+                    <g id="分组-14" transform="translate(9.200000, 6.200000)">
+                        <ellipse id="Oval-2" fill="#999999" filter="url(#filter-1)" cx="12.8" cy="33.6" rx="2.6" ry="1.2"></ellipse>
+                        <g id="Combined-Shape">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                        <mask id="mask-5" fill="white">
+                            <use xlink:href="#path-4"></use>
+                        </mask>
+                        <use id="Mask" fill="#FF7963" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
