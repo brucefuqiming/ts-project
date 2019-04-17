@@ -1,7 +1,7 @@
 import {
   getJson,
   postJson,
-} from '../utils/ajaxUtil.js';
+} from '../utils/ajaxUtil';
 
 import htmlparser from '@/utils/htmlparser';
 import xss from '@/utils/xss';

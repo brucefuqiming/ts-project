@@ -23,6 +23,7 @@ import xss from '../utils/xss';
 import StringUtil from '../utils/stringUtil';
 import hybrid from '../utils/hybrid';
 import { Route } from 'vue-router';
+import { ArticleResp } from './interface';
 @Component({
   components: {
     aricleDetailTitle,
@@ -42,61 +43,57 @@ export default class Article extends Vue {
   public nodes: [] = [];
   public entryid: string = '';
   public title: string = '';
-  public type: string = '';
+  public type: number = 1;
   public thumb: string = '';
   @Prop() private aid!: any;
 
   @Watch('$route')
   public routeChange(ro: Route, from: Route) {
-    this.setTitle(this.title + '_文章');
+    this.$setTitle(this.title + '_文章');
   }
 
   public mounted() {
-    ArticleService.getArticleDetail(this.aid)
-      .then((resp: any) => {
-        this.detailData = resp.data;
-        this.refer = resp.data.refer;
-        if (this.refer && this.refer.originalUrl) {
-          this.refer.originalUrl =
-            '从' + StringUtil.getDomainName(this.refer.originalUrl) + '添加';
-        }
-        this.Contenttext = (resp.data.content);
-        this.nodes = resp.data.nodes || [];
-        this.title = resp.data.title || null;
-        this.type = resp.data.type;
-        this.thumb = resp.data.thumb;
-        this.setTitle(resp.data.title + '_文章');
-        // Vue.prototype.$previewRefresh();
-      });
-      // .then((_) => {
-        // console.log('href', require("@/assets/img/share/index.png"))
-        // hybrid.registerShareData({
-        //   // your code zhengkun
-        //   title: this.title + ' | 全历史文章', // 分享标题
-        //   desc: StringUtil.subStr(this.Contenttext, 100), // 分享描述
-        //   imgUrl: this.thumb ? this.thumb : require('@/assets/img/share/index.png'), // 分享图标
-        // }, '');
-
-      // });
-
-    // Vue.prototype.sendTracking({
-    //   actionType: 'show',
-    //   params: {
-    //     articleID: this.aid,
-    //   },
+    ArticleService.getArticleDetail(this.aid).then((resp: ArticleResp) => {
+      this.detailData = resp;
+      this.refer = resp.refer;
+      if (this.refer && this.refer.originalUrl) {
+        this.refer.originalUrl =
+          '从' + StringUtil.getDomainName(this.refer.originalUrl) + '添加';
+      }
+      this.Contenttext = resp.content;
+      this.nodes = resp.nodes || [];
+      this.title = resp.title || '';
+      this.type = resp.type;
+      this.thumb = resp.thumb;
+      this.$setTitle(resp.title + '_文章');
+      this.$previewRefresh();
+    });
+    // .then((_) => {
+    //   hybrid.registerShareData({
+    //     // your code zhengkun
+    //     title: this.title + ' | 全历史文章', // 分享标题
+    //     desc: StringUtil.subStr(this.Contenttext, 100), // 分享描述
+    //     imgUrl: this.thumb ? this.thumb : require('@/assets/img/share/index.png'), // 分享图标
+    //   });
     // });
+    this.$eventTrack.sendTracking({
+      actionType: 'show',
+      params: {
+        articleID: this.aid,
+      },
+    });
   }
   public activated() {
-    // Vue.prototype.sendTracking({
-    //   actionType: 'show',
-    //   params: {
-    //     articleID: this.aid,
-    //   },
-    // });
+    this.$eventTrack.sendTracking({
+      actionType: 'show',
+      params: {
+        articleID: this.aid,
+      },
+    });
   }
-  public  htmlchange(str: string) {
-      const html = xss(htmlparser.htmlDecode(str), 'content');
-      return articleParser.resolveSpecialImport(html);
+  public htmlchange(str: string) {
+    const html = xss(htmlparser.htmlDecode(str), 'content');
+    return articleParser.resolveSpecialImport(html);
   }
 }
 </script>

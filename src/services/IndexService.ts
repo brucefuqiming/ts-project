@@ -1,7 +1,7 @@
 import {
   getJson,
   postJson,
-} from '../utils/ajaxUtil.js';
+} from '../utils/ajaxUtil';
 
 const lang = 'cn';
 

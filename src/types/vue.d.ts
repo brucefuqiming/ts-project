@@ -1,9 +1,11 @@
 import VueRouter from 'vue-router';
+import Vue from 'vue';
+import { EventTracking } from '../components/eventtracking';
 declare module 'vue/types/vue' {
   interface Vue {
-    setTitle: any,
-    $eventTrack: any,
+    $setTitle(title:string):void,
     $previewRefresh: any
-    $router: VueRouter
+    $router: VueRouter,
+    $eventTrack:  EventTracking
   }
 }

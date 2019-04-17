@@ -47,10 +47,11 @@ export default class App extends Vue {
     this.resizeApp();
   }
   public  specialEventTrack(url: string) {
-      const params: any = getUrlQueryMessage(url) || {};
-      const urlParam = url.replace(/https?:\/\/[^/]*\//gi, '').split('/');
-      if (url.indexOf('/family/subIndex') >= 0) {
-        Vue.prototype.EventTracking.sendTracking({
+    // this.$eventTrack.sendTracking();
+    const params: any = getUrlQueryMessage(url) || {};
+    const urlParam = url.replace(/https?:\/\/[^/]*\//gi, '').split('/');
+    if (url.indexOf('/family/subIndex') >= 0) {
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'familyCard',
@@ -60,7 +61,7 @@ export default class App extends Vue {
           },
         });
       } else if (url.indexOf('/relation') >= 0) {
-        Vue.prototype.EventTracking.sendTracking({
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'customLandingPage',
@@ -70,7 +71,7 @@ export default class App extends Vue {
           },
         });
       } else if (url.indexOf('/book/read') >= 0) {
-        Vue.prototype.EventTracking.sendTracking({
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'bookCard',
@@ -80,7 +81,7 @@ export default class App extends Vue {
           },
         });
       } else if (url.indexOf('/map/detail') >= 0) {
-        Vue.prototype.EventTracking.sendTracking({
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'timeMapCard',
@@ -90,7 +91,7 @@ export default class App extends Vue {
           },
         });
       } else if (url.indexOf('/cluster') >= 0) {
-        Vue.prototype.EventTracking.sendTracking({
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'careercard',
@@ -103,7 +104,7 @@ export default class App extends Vue {
     }
   public  normalEventTrack(dom: any) {
       if (dom.tagName.toUpperCase() === 'IMG' && dom.getAttribute('preview')) {
-        Vue.prototype.EventTracking.sendTracking({
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'artCard',
@@ -113,7 +114,7 @@ export default class App extends Vue {
           },
         });
       } else if (dom.classList.contains('dls-video-box')) {
-        Vue.prototype.EventTracking.sendTracking({
+        this.$eventTrack.sendTracking({
           actionType: 'click',
           params: {
             modName: 'videoCard',

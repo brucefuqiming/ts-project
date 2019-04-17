@@ -1,14 +1,14 @@
 import axios from 'axios';
 import {getFingerPrint} from './fnUtil';
 import {setStorageItem, getStorageItem} from './store';
-import {AxiosRequestConfig} from 'axios';
+import {AxiosRequestConfig, AxiosResponse, AxiosError} from 'axios';
 const lang = 'cn';
 
 // const domainName = '__ALLHISTORY_HOSTNAME__';
 const domainName = 'http://10.4.40.168';
 
 // http post
-export const postJson = (url: string, params: any = '', config: any = {}) => {
+export const postJson = (url: string, params: any = '', config?: any) => {
   params = Object.assign({
     language: lang,
   }, params);
@@ -16,7 +16,7 @@ export const postJson = (url: string, params: any = '', config: any = {}) => {
 };
 
 // http get
-export const getJson = (url: string, params = '', config = {}) => {
+export const getJson = (url: string, params = '', config?: any) => {
   return sendRequest(url, 'get', params, config);
 };
 
@@ -31,7 +31,7 @@ async function getID() {
   return id;
 }
 
-function sendRequest(url: string, type: any, params = '', config: any) {
+function sendRequest(url: string, type: string, params = '', config?: any): Promise<any> {
   // 默认配置
   config = Object.assign({
     // 是否请求本地接口（api被不可被设置为本地）
@@ -70,20 +70,20 @@ function sendRequest(url: string, type: any, params = '', config: any) {
         async: config.async === false ? false : true,
         crossDomain: true,
       };
-      axios(reqConfig).then((resp) => {
+      axios(reqConfig).then((resp: AxiosResponse) => {
         switch (resp.data.code) {
           case 200:
           case 201:
-            resolve(resp.data);
-            break;
+          resolve(resp.data.data);
+          break;
           case 401:
           case 403:
           default:
-            reject(resp.data);
+          reject(resp.data);
         }
-      }, (err: any) => {
+      }, (err: AxiosError) => {
         reject(err);
-      }).catch((resp: any) => {
+      }).catch((resp: AxiosResponse) => {
         switch (resp.data.status) {
           case 401:
             console.log('账户过期');

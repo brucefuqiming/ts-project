@@ -7,15 +7,15 @@ import './directives';
 
 import App from './App.vue';
 import router from './router';
-import store from './store';
-// import EventTracking from './components/eventtracking/eventtracking.vue';
+import store from './store/index';
+import eventTracking from './components/eventtracking';
 import './utils/diamond';
 
 Vue.config.productionTip = false;
 console.log(navigator.userAgent);
 Vue.use(vOutsideEvents);
 
-Vue.prototype.setTitle = (title: string) => {
+Vue.prototype.$setTitle = (title: string) => {
   document.title = title + '_全历史';
 };
 
@@ -38,7 +38,7 @@ Vue.prototype.wakeupApp = (from: string = 'm_site') => {
   window.location.href = url;
 };
 
-// Vue.prototype.$eventTrack = EventTracking;
+Vue.prototype.$eventTrack = eventTracking;
 
 new Vue({
   router,
