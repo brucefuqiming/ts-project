@@ -8,7 +8,7 @@ class EventTracking {
   public referUrl: string;
   public prePageID: string;
   public pageID: string;
-  constructor(props?: Props) {
+  constructor() {
     this.referUrl = Cookies.get('refer.url');
     this.prePageID = Cookies.get('page.prev.id');
     this.pageID = Cookies.get('page.id');
@@ -21,7 +21,7 @@ class EventTracking {
    * @param {Object} properties
    * @param {Node} $target
    */
-  public sendTracking(properties: Props = {}, $target?: any) {
+  public sendTracking(properties: Props, $target?: any) {
     // default value
     // this._correctCookie();
     try {

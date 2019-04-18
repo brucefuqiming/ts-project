@@ -45,7 +45,7 @@ export default class Article extends Vue {
   public title: string = '';
   public type: number = 1;
   public thumb: string = '';
-  @Prop() private aid!: any;
+  @Prop() private aid!: string;
 
   @Watch('$route')
   public routeChange(ro: Route, from: Route) {
@@ -67,15 +67,15 @@ export default class Article extends Vue {
       this.thumb = resp.thumb;
       this.$setTitle(resp.title + '_文章');
       this.$previewRefresh();
+    })
+    .then((_) => {
+      hybrid.registerShareData({
+        // your code zhengkun
+        title: this.title + ' | 全历史文章', // 分享标题
+        desc: StringUtil.subStr(this.Contenttext, 100), // 分享描述
+        imgUrl: this.thumb ? this.thumb : require('@/assets/img/share/index.png'), // 分享图标
+      });
     });
-    // .then((_) => {
-    //   hybrid.registerShareData({
-    //     // your code zhengkun
-    //     title: this.title + ' | 全历史文章', // 分享标题
-    //     desc: StringUtil.subStr(this.Contenttext, 100), // 分享描述
-    //     imgUrl: this.thumb ? this.thumb : require('@/assets/img/share/index.png'), // 分享图标
-    //   });
-    // });
     this.$eventTrack.sendTracking({
       actionType: 'show',
       params: {

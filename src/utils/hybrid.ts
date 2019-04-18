@@ -18,7 +18,7 @@ export default {
    * @param {title, desc, link, imgUrl} info
    * @param {function} cb
    */
-  registerShareData(info = {}, cb?: () => void) {
+  registerShareData(info: ShareInfo, cb?: () => void) {
 
     const descMeta = document.querySelector('meta[name="description"]');
     info = Object.assign({
