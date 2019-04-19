@@ -22,7 +22,7 @@ export default {
   getRelation(id = '', language = lang) {
     return getJson(`/api/item/relation/${language}/${id}`);
   },
-  getRelationGragh(id: any, language = lang) {
+  getRelationGragh(id: string, language = lang) {
     return getJson(`/api/customRelationGraph/${language}/${id}`);
   },
   getDetail(id = '', language = lang) {

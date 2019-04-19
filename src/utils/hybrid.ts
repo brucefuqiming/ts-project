@@ -8,9 +8,7 @@
 
 import wechart from './wechart';
 import diamond from './diamond';
-import {
-  setUrlParam,
-} from './urlUtil';
+import { ShareInfo } from './wechart';
 
 export default {
   /**

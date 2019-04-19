@@ -1,3 +1,5 @@
 export interface State {
-  list: number[];
+  username: string;
+  routeFrom: string;
+  [propName: string]: any;
 }

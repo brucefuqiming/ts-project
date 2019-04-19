@@ -6,11 +6,20 @@
 // import VConsole from 'vconsole';
 import GlobalService from '../services/GlobalService';
 
-const weChartUtils = {};
-
-
 // console.log(navigator.userAgent)
 // new VConsole()
+export interface WeChartInterface {
+  setConfig(jsApiList: string[]): Promise<{}>;
+  setShareInfo(info: ShareInfo): void;
+}
+
+export interface ShareInfo {
+  title?: string;
+  desc?: string;
+  link?: string;
+  imgUrl?: string;
+  success?: () => void;
+}
 
 class WeChart implements WeChartInterface {
   constructor() {
@@ -27,6 +36,7 @@ class WeChart implements WeChartInterface {
 
         const data = resp.data;
 
+        if (!wx) { resolve(); }
         wx.config({
           // debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
           appId: data.appId, // 必填，公众号的唯一标识

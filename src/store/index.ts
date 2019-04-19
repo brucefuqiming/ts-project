@@ -2,17 +2,15 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import IndexService from '../services/IndexService';
 import EntryService from '../services/EntryService';
-import StringUtil from '@/utils/stringUtil';
-import EventTracking from '../components/eventtracking/eventtracking.vue';
+import EventTracking from '../components/eventtracking';
 
 import { home } from './modules/home';
 import { map } from './modules/map';
 Vue.use(Vuex);
-
-export default new Vuex.Store({
-  state: {
-    username: null,
-    routeFrom: null,
+import {State} from './interface';
+const state: State = {
+  username: '',
+    routeFrom: '',
     navShow: true,
     navTheme: 'light',
     detailPopup: {
@@ -27,35 +25,37 @@ export default new Vuex.Store({
     downloadPopup: {
       show: false,
     },
-  },
+};
+export default new Vuex.Store({
+  state,
   mutations: {
-    setUsername(state, payload) {
+    setUsername(states, payload) {
       state.username = payload.username;
     },
-    setDetailPopup(state, payload) {
+    setDetailPopup(states, payload) {
       if (payload && payload.show) {
         console.log(payload);
-        // EventTracking.sendTracking({
-        //   actionType: 'click',
-        //   params: {
-        //     modName: payload.modName || 'contentlink',
-        //     clickList: payload.clickList || 'AHLinkPreview',
-        //     clickAction: 'show',
-        //     id: payload.id,
-        //   },
-        // });
+        EventTracking.sendTracking({
+          actionType: 'click',
+          params: {
+            modName: payload.modName || 'contentlink',
+            clickList: payload.clickList || 'AHLinkPreview',
+            clickAction: 'show',
+            id: payload.id,
+          },
+        });
       }
       state.detailPopup = Object.assign({}, state.detailPopup, payload);
     },
     setDownloadPopup(state, payload) {
       if (payload && payload.show) {
-        // EventTracking.sendTracking({
-        //   actionType: 'click',
-        //   params: {
-        //     modName: 'appTipsPage',
-        //     clickAction: 'show'
-        //   }
-        // });
+        EventTracking.sendTracking({
+          actionType: 'click',
+          params: {
+            modName: 'appTipsPage',
+            clickAction: 'show',
+          },
+        });
       }
       state.downloadPopup = Object.assign({}, state.downloadPopup, payload);
     },

@@ -1,15 +1,19 @@
 <template>
-  <div id="aricleDetail">
+  <div id="aricleDetail" ref="testDiv">
     <aricle-detail-title :TotitleData="detailData"></aricle-detail-title>
     <aricleDetailCotent v-if="type==1" :Contenttext="Contenttext"></aricleDetailCotent>
     <articleSource v-if="refer.websiteName" :TotitleData="refer"></articleSource>
     <sourceAuthor v-if="refer.authorName" :TotitleData="refer"></sourceAuthor>
     <sourceAddress v-if="refer.originalUrl" :TotitleData="refer"></sourceAddress>
-    <aricleDetailTags :TotagsData="detailData"></aricleDetailTags>
+    <aricleDetailTags ref="test" :TotagsData="detailData"></aricleDetailTags>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
+import {  State,
+Getter,
+Action,
+Mutation } from 'vuex-class';
 import articleSource from '../components/articleDetail/source.vue';
 import sourceAuthor from '../components/articleDetail/source-author.vue';
 import sourceAddress from '../components/articleDetail/source-address.vue';
@@ -45,14 +49,19 @@ export default class Article extends Vue {
   public title: string = '';
   public type: number = 1;
   public thumb: string = '';
+  public $refs!: {
+    test: aricleDetailTags,
+    testDiv: HTMLDivElement,
+  };
   @Prop() private aid!: string;
-
   @Watch('$route')
   public routeChange(ro: Route, from: Route) {
     this.$setTitle(this.title + '_文章');
+    // this.$store.stat
   }
-
   public mounted() {
+    // const Dom = document.querySelector('#aricleDetail') as HTMLDivElement;
+    // Dom.innerHTML = '';
     ArticleService.getArticleDetail(this.aid).then((resp: ArticleResp) => {
       this.detailData = resp;
       this.refer = resp.refer;
@@ -60,7 +69,7 @@ export default class Article extends Vue {
         this.refer.originalUrl =
           '从' + StringUtil.getDomainName(this.refer.originalUrl) + '添加';
       }
-      this.Contenttext = resp.content;
+      this.Contenttext = this.htmlchange(resp.content);
       this.nodes = resp.nodes || [];
       this.title = resp.title || '';
       this.type = resp.type;
