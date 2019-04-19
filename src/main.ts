@@ -10,11 +10,9 @@ import router from './router';
 import store from './store/index';
 import eventTracking from './components/eventtracking';
 import './utils/diamond';
-
 Vue.config.productionTip = false;
 console.log(navigator.userAgent);
 Vue.use(vOutsideEvents);
-
 Vue.prototype.$setTitle = (title: string) => {
   document.title = title + '_全历史';
 };

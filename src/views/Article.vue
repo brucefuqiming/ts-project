@@ -10,10 +10,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
-import {  State,
-Getter,
-Action,
-Mutation } from 'vuex-class';
+import {  State, Getter, Action, Mutation } from 'vuex-class';
 import articleSource from '../components/articleDetail/source.vue';
 import sourceAuthor from '../components/articleDetail/source-author.vue';
 import sourceAddress from '../components/articleDetail/source-address.vue';
@@ -28,6 +25,8 @@ import StringUtil from '../utils/stringUtil';
 import hybrid from '../utils/hybrid';
 import { Route } from 'vue-router';
 import { ArticleResp } from './interface';
+import { SetDetailPopupPayload } from '../store/mutations';
+
 @Component({
   components: {
     aricleDetailTitle,
@@ -53,11 +52,11 @@ export default class Article extends Vue {
     test: aricleDetailTags,
     testDiv: HTMLDivElement,
   };
+  @Mutation public setDetailPopup!: (payload: SetDetailPopupPayload) => void;
   @Prop() private aid!: string;
   @Watch('$route')
   public routeChange(ro: Route, from: Route) {
     this.$setTitle(this.title + '_文章');
-    // this.$store.stat
   }
   public mounted() {
     // const Dom = document.querySelector('#aricleDetail') as HTMLDivElement;

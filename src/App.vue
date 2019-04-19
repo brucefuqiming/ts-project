@@ -1,6 +1,7 @@
 <template>
   <div ref="app" id="app" @click="onClick">
     <!-- <nav-bar/> -->
+    <a href="javascripg:;">123</a>
     <keep-alive :exclude="['Book', 'Relation', 'abpath', 'Map']">
       <router-view class="root-view"></router-view>
     </keep-alive>
@@ -102,7 +103,7 @@ export default class App extends Vue {
         });
       }
     }
-  public  normalEventTrack(dom: any) {
+  public  normalEventTrack(dom: HTMLImageElement) {
       if (dom.tagName.toUpperCase() === 'IMG' && dom.getAttribute('preview')) {
         this.$eventTrack.sendTracking({
           actionType: 'click',
@@ -124,10 +125,10 @@ export default class App extends Vue {
         });
       }
     }
-    public needBlock(dom: any) {
+    public needBlock(dom: any): boolean | HTMLLinkElement {
       let d = dom;
       while (d && d.nodeName !== 'BODY') {
-        this.normalEventTrack(d);
+        // this.normalEventTrack(d);
         if (d.nodeName === 'A') {
           return d;
         }
@@ -135,11 +136,11 @@ export default class App extends Vue {
       }
       return false;
     }
-    public onClick(e: any) {
-      const d = this.needBlock(e.target);
+    public onClick(e: Event) {
+      const d = this.needBlock(e.target) as HTMLLinkElement;
       if (d) {
         e.preventDefault();
-        let url = d.getAttribute('href');
+        let url = d.getAttribute('href')!;
         this.specialEventTrack(url);
         url = url.replace(/https?:\/\/[^/]*\//gi, '/');
         this.$router.push(url);
@@ -156,6 +157,10 @@ export default class App extends Vue {
 }
 </script>
 <style lang="scss">
+body{
+  width: 500px;
+  height: 500px;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s;
