@@ -4,15 +4,17 @@ import vOutsideEvents from 'vue-outside-events';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import './directives';
-
+import {Button, Message} from 'element-ui';
 import App from './App.vue';
 import router from './router';
 import store from './store/index';
 import eventTracking from './components/eventtracking';
 import './utils/diamond';
+Vue.use(Button);
 Vue.config.productionTip = false;
 console.log(navigator.userAgent);
 Vue.use(vOutsideEvents);
+Vue.prototype.$message = Message;
 Vue.prototype.$setTitle = (title: string) => {
   document.title = title + '_全历史';
 };

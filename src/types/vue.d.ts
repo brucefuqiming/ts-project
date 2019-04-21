@@ -6,6 +6,7 @@ declare module 'vue/types/vue' {
     $setTitle(title:string):void,
     $previewRefresh: any
     $router: VueRouter,
-    $eventTrack:  EventTracking
+    $eventTrack:  EventTracking,
+    // $message:
   }
 }

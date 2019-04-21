@@ -5,6 +5,7 @@
     <keep-alive :exclude="['Book', 'Relation', 'abpath', 'Map']">
       <router-view class="root-view"></router-view>
     </keep-alive>
+    <el-button type="primary">测试</el-button>
     <!-- <detail-popup/> -->
     <!-- <download-popup/> -->
   </div>
@@ -33,7 +34,7 @@ import { Route } from 'vue-router';
 })
 export default class App extends Vue {
   public $refs!: { // strictPropertyInitialization 需要对所有的实际属性赋值 所以需要加感叹号
-    app: any,
+    app: HTMLDivElement,
   };
   @State public navShow!: boolean;
   @Watch('navShow')
@@ -45,6 +46,7 @@ export default class App extends Vue {
     this.resizeApp();
   }
   public mounted() {
+    // this.$message.success('成功了');
     this.resizeApp();
   }
   public  specialEventTrack(url: string) {
@@ -128,7 +130,7 @@ export default class App extends Vue {
     public needBlock(dom: any): boolean | HTMLLinkElement {
       let d = dom;
       while (d && d.nodeName !== 'BODY') {
-        // this.normalEventTrack(d);
+        this.normalEventTrack(d);
         if (d.nodeName === 'A') {
           return d;
         }
@@ -147,7 +149,7 @@ export default class App extends Vue {
       }
     }
     public resizeApp() {
-      const rootDom = this.$refs.app.querySelector('.root-view');
+      const rootDom = this.$refs.app.querySelector('.root-view') as HTMLDivElement;
       if (rootDom) {
         rootDom.style.minHeight =
           window.innerHeight - (this.navShow ? 60 : 0) + 'px';
