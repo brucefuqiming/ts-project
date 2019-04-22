@@ -436,7 +436,7 @@ a {
   }
 }
 .dls-card-in-article {
-  width: calc("100% - 18px");
+  width: calc(100% - 18px);
   padding: 8px;
   border: 1px solid #ececec;
   position: relative;
@@ -454,7 +454,7 @@ a {
   .dls-article-card-detail {
     position: relative;
     display: inline-block;
-    width: calc("100% - 119px");
+    width: calc(100% - 119px);
     .dls-article-card-title {
       font-size: 22px;
       line-height: 24px;

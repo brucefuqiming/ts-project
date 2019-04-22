@@ -60,7 +60,7 @@ export const getUrlParam = (url: string, key: any) => {
  * @param {*} key Object || String
  * @param {*} value String?
  */
-export const setUrlParam = (url: any, key: any, value: any) => {
+export const setUrlParam = (url: any, key: any, value?: any) => {
   if (!url) {
     return '';
   }

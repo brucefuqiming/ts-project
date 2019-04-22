@@ -73,7 +73,7 @@ export default class AricleDetailCotent extends Vue {
     }
   }
   .dls-book-in-article {
-    width: calc("100% - 60px");
+    width: calc(100% - 60px);
     background: #f6f6f6;
     height: 100px;
     padding: 14px 26px;
@@ -153,7 +153,7 @@ export default class AricleDetailCotent extends Vue {
       font-size: 12px;
       vertical-align: top;
       overflow: hidden;
-      width: calc("100% - 105px");
+      width: calc(100% - 105px);
       pointer-events: none;
       float: none !important;
       .addBookItemTitle {
