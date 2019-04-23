@@ -27,56 +27,41 @@
   </div>
 </template>
 
-<script>
-import StringUtil from "@/utils/stringUtil";
-import htmlparser from "@/utils/htmlparser";
-import xss from "@/utils/xss";
-
-export default {
-  name: "RelationList",
-  props: {
-    links: {
-      default: function() {
-        return [];
-      }
-    },
-    show: {
-      default: false
-    }
-  },
-  data() {
-    return {
-      activeId: false
-    };
-  },
-  computed: {
-    linksFormat() {
-      return this.links.map(link => {
-        return {
-          ...link,
-          realLength: StringUtil.getRealLength(link.desc),
-          desc: xss(htmlparser.htmlDecode(link.desc), {
-            whiteList: {
-              a: ["href", "id"]
-            },
-            stripIgnoreTag: true // 过滤所有非白名单标签的HTML
-          })
-        };
-      });
-    }
-  },
-  methods: {
-    onLinkClick(id, e) {
-      if(e.target.nodeName == "A") {
-        return ;
-      }
-      this.$emit("on-link-click", id);
-    }
+<script lang="ts">
+import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
+import StringUtil from '@/utils/stringUtil';
+import htmlparser from '@/utils/htmlparser';
+import xss from '@/utils/xss';
+@Component
+export default class RelationList extends Vue {
+  @Prop() public links!: string[];
+  @Prop() public show!: boolean;
+  public activeId: boolean = false;
+  get linksFormat() {
+    return this.links.map((link: any) => {
+      return {
+        ...link,
+        realLength: StringUtil.getRealLength(link.desc),
+        desc: xss(htmlparser.htmlDecode(link.desc), {
+          whiteList: {
+            a: ['href', 'id'],
+          },
+          stripIgnoreTag: true, // 过滤所有非白名单标签的HTML
+        }),
+      };
+    });
   }
-};
+  public onLinkClick(id: any, e: Event) {
+    const target = e.target as Node;
+    if (target && target.nodeName === 'A') {
+      return ;
+    }
+    this.$emit('on-link-click', id);
+  }
+}
 </script>
 
-<style lang="less" scope>
+<style lang="scss" scope>
 .relation-list-container {
   position: fixed;
   background: white;
@@ -114,7 +99,7 @@ a {
   li {
     position: relative;
     margin-bottom: 40px;
-    width: calc(~"100% - 40px");
+    width: calc(100% - 40px);
     padding: 12px 24px;
     cursor: pointer;
     .relation-name {
@@ -183,10 +168,6 @@ a {
         line-height: 2;
         margin-top: -3px;
       }
-
-      // .icon-arrow-down{
-      //   // float: right;
-      // }
     }
 
     &.active {

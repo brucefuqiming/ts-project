@@ -270,7 +270,7 @@ export default class Network extends Vue {
         // 将新的点的坐标设为currentNode附近
         const pos = this.getNodeById(from).position;
         let x = pos.x;
-        networkData.nodes.map((node) => {
+        networkData.nodes.map((node: any) => {
           node.position = {
             x: (x += 300),
             y: pos.y,
@@ -286,7 +286,7 @@ export default class Network extends Vue {
       this.chart.appendEdges(this.data.links);
 
       setTimeout((_: any) => {
-        networkData.links.map((link) => {
+        networkData.links.map((link: any) => {
           this.setHighLightLink(link.id);
           const cl = this.getLinkById(link.id);
           this.changeLink(cl, { id: link.id });
