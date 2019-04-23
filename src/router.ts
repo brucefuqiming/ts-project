@@ -10,7 +10,7 @@ import uniqid from 'uniqid';
  */
 // import Login from './views/Login.vue';
 import Article from './views/Article.vue';
-// import Relation from './views/Relation/Relation.vue';
+import Relation from './views/Relation/Relation.vue';
 // import MapDetail from './views/map/map-detail/map-detail.vue';
 // import Book from './views/Book/Book.vue';
 // import Painting from './views/Painting/Painting.vue';
@@ -29,12 +29,12 @@ const router = new Router({
       props: true,
       component: Article,
     },
-    // {
-    //   path: '/relation',
-    //   name: 'relation',
-    //   props: (route) => ({ ...route.query }),
-    //   component: Relation,
-    // },
+    {
+      path: '/relation',
+      name: 'relation',
+      props: (route) => ({ ...route.query }),
+      component: Relation,
+    },
     // {
     //   path: '/map/detail/:id/:nid?',
     //   name: 'map-detail',

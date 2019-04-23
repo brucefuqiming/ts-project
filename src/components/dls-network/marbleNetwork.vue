@@ -5,7 +5,7 @@
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 import NetChart from 'marble-net';
-import DataParser from './dataParser/marbleParser.js';
+import DataParser from './dataParser/marbleParser';
 import { b64toBlob } from '@/utils/dataUtil';
 import Relation from '@/views/Relation/Relation.vue';
 @Component

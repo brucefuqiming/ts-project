@@ -3,7 +3,7 @@ const state: State = {
   username: '',
   routeFrom: '',
   navShow: true,
-  navTheme: 'light',
+  navTheme: 'dark',
   detailPopup: {
     show: false,
     success: false,

@@ -1,20 +1,19 @@
 <template>
   <div ref="app" id="app" @click="onClick">
-    <!-- <nav-bar/> -->
-    <a href="javascripg:;">123</a>
+    <nav-bar/> 
     <keep-alive :exclude="['Book', 'Relation', 'abpath', 'Map']">
       <router-view class="root-view"></router-view>
     </keep-alive>
-    <el-button type="primary">测试</el-button>
-    <!-- <detail-popup/> -->
-    <!-- <download-popup/> -->
+    <!-- <el-button type="primary">测试</el-button> -->
+    <detail-popup/>
+    <download-popup/>
   </div>
 </template>
 
 <script lang="ts">
-// import DetailPopup from './components/detailPop/detailPop';
-// import DownloadPopup from './components/downloadPop/downloadPop';
-// import NavBar from './components/navBar/nav-bar';
+import DetailPopup from './components/detailPop/detailPop.vue';
+import DownloadPopup from './components/downloadPop/downloadPop.vue';
+import NavBar from './components/navBar/nav-bar.vue';
 import { getUrlQueryMessage } from '@/utils/urlUtil';
 import {
   State,
@@ -26,11 +25,11 @@ import {
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 import { Route } from 'vue-router';
 @Component({
-  // components: {
-  //   DetailPopup,
-  //   NavBar,
-  //   DownloadPopup,
-  // },
+  components: {
+    DetailPopup,
+    NavBar,
+    DownloadPopup,
+  },
 })
 export default class App extends Vue {
   public $refs!: { // strictPropertyInitialization 需要对所有的实际属性赋值 所以需要加感叹号
@@ -159,10 +158,7 @@ export default class App extends Vue {
 }
 </script>
 <style lang="scss">
-body{
-  width: 500px;
-  height: 500px;
-}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s;

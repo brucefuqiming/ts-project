@@ -20,7 +20,7 @@
       v-on:change-link="onLinkChange"
       v-bind:node="currentNode"
       v-bind:link="currentLink"
-      v-bind:type="currentType"
+      :types="currentType"
     />
   </div>
 </template>
@@ -31,11 +31,12 @@ import Network from '../../components/dls-network/marbleNetwork.vue';
 import InfoBox from '../../components/dls-network/infoBox/infoBox.vue';
 import RelationList from '../../components/relationList/relationList.vue';
 
-import EntryService from '../../services/EntryService.js';
+import EntryService from '../../services/EntryService';
 
 import StringUtil from '@/utils/stringUtil';
 import hybrid from '@/utils/hybrid';
 import App from '@/App.vue';
+import { Route } from 'vue-router';
 @Component({
   components: {
     Network,
@@ -47,7 +48,7 @@ export default class Relation extends Vue {
   public title: any = '';
   public currentNode: any = null;
   public currentLink: any = null;
-  public currentType: any = null;
+  public currentType: string = '';
   public selectPath: any = [];
   public linkList: any = [];
   public listShow: any = false;
@@ -60,16 +61,18 @@ export default class Relation extends Vue {
   @Prop() private id!: string;
   @Prop() private networkId!: string;
   @Watch('$route')
-  public routeChange(to: any, from: any) {
+  public routeChange(to: Route, from: Route) {
     this.$setTitle(this.title + '_关系图谱');
   }
   public async mounted() {
     this.$parent.resizeApp();
     if (this.networkId) {
       const resp = await EntryService.getRelationGragh(this.networkId);
-      this.title = resp.data.title;
+      console.log(resp);
+
+      this.title = resp.title;
       this.$setTitle(this.title + '_关系图谱');
-      this.relationGraph = resp.data.relationGraph;
+      this.relationGraph = resp.relationGraph;
       for (let i = 0; i < this.relationGraph.nodes.length; i++) {
         this.addPath(this.relationGraph.nodes[i].id);
       }
@@ -145,7 +148,7 @@ export default class Relation extends Vue {
     });
   }
   public onClickNull() {
-    this.currentType = null;
+    this.currentType = '';
   }
   public onLinkChange(link: string, prev: any) {
     this.$refs.network.clearHighLightLink();
@@ -188,7 +191,7 @@ export default class Relation extends Vue {
   }
   public async retriveNode(id: any) {
     const resp = await EntryService.getRelation(id);
-    return resp.data;
+    return resp;
   }
   public addPath(id: any) {
     if (this.selectPath.indexOf(id) < 0) {

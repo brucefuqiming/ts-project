@@ -1,5 +1,5 @@
 <template>
-  <section v-if="type == 'link'" class="netLinkInfo-box panel-relation">
+  <section v-if="types == 'link'" class="netLinkInfo-box panel-relation">
     <div class="atobNetLinkInfo-li" :id="linkFormated.id">
       <div class="atobNetLinkInfo-title">
         <span v-if="linkFormated.cluster.prev" @click="arrowClick(-1)" class="leftArrow"></span>
@@ -38,7 +38,7 @@
       </div>
     </div>
   </section>
-  <div class="network-pop-panel" v-else-if="type == 'node'">
+  <div class="network-pop-panel" v-else-if="types == 'node'">
     <div class="network-panel-title cp">
       <a :href="'/detail/' + node.id">
         {{node.name}}
@@ -51,10 +51,11 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
+@Component
 export default class Infobox extends Vue {
   @Prop() public node!: object;
   @Prop() public link!: any;
-  @Prop() public type!: string;
+  @Prop() public types!: string;
   get linkFormated() {
     const i = this.getLinkPosition();
     return {

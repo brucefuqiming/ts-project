@@ -7,6 +7,7 @@ declare module 'vue/types/vue' {
     $previewRefresh: any
     $router: VueRouter,
     $eventTrack:  EventTracking,
+    wakeupApp: (from?: string) => void
     // $message:
   }
 }

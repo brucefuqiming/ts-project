@@ -1,8 +1,8 @@
 import StringUtils from '@/utils/stringUtil';
-import { timeStantard } from '@/utils/dateUtil.js';
-import { setUrlParam } from '@/utils/urlUtil.js';
-import htmlparser from '@/utils/htmlparser.js';
-import xss from '@/utils/xss.js';
+import { timeStantard } from '@/utils/dateUtil';
+import { setUrlParam } from '@/utils/urlUtil';
+import htmlparser from '@/utils/htmlparser';
+import xss from '@/utils/xss';
 
 const NODE_WIDTH = 60;
 const NODE_OFFSET_TO_COLLISION = 10;

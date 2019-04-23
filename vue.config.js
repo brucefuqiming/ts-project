@@ -7,7 +7,7 @@ module.exports = {
     }
     config.module
       .rule('link-replace')
-      .test(/\.(vue|js)$/)
+      .test(/\.(vue|ts)$/)
       .use('webpack-repalce')
       .loader('webpack-replace')
       .options({
