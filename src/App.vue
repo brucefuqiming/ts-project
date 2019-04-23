@@ -4,7 +4,6 @@
     <keep-alive :exclude="['Book', 'Relation', 'abpath', 'Map']">
       <router-view class="root-view"></router-view>
     </keep-alive>
-    <!-- <el-button type="primary">测试</el-button> -->
     <detail-popup/>
     <download-popup/>
   </div>

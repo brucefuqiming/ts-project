@@ -4,7 +4,7 @@ import store from '../store';
 Vue.directive('downloadPop', {
   bind(el) {
     el.onclick = () => {
-      // store.commit('setDownloadPopup', { show: true });
+      store.commit('setDownloadPopup', { show: true });
     };
   },
 });

@@ -7,6 +7,7 @@ interface State {
   downloadPopup: DownloadPopup;
 }
 
+
 interface DetailPopup {
   show: boolean;
   success: boolean;
@@ -18,4 +19,17 @@ interface DetailPopup {
 }
 interface DownloadPopup {
   show: boolean;
+}
+
+interface MapState {
+  year: number;
+  years: number[];
+  map : any;
+}
+
+interface HomeState {
+  page: number;
+  totalPage: number;
+  pageSize: number;
+  loadmore: boolean;
 }

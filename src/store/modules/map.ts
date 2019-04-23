@@ -5,23 +5,22 @@
  *  data:
  * }
  */
-
+const mapState: MapState = {
+  year: 1949,
+  years: [],
+  map : {},
+};
 export const map = {
   namespaced: true,
-  state: {
-    year: 1949,
-    years: [],
-    map : {},
-  },
+  state: mapState,
   mutations: {
-    setYear(state: any, payload: any) {
-      console.log({payload});
+    setYear(state: MapState, payload: any) {
       state.year = payload;
     },
-    setYears(state: any, payload: any) {
+    setYears(state: MapState, payload: any) {
       state.years = payload;
     },
-    setMap(state: any, payload: any) {
+    setMap(state: MapState, payload: any) {
       state.map = payload;
     },
   },

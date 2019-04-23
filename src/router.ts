@@ -139,14 +139,14 @@ router.beforeEach((to: Route, from: Route, next) => {
     store.dispatch('getEntrySummarize', to.params.id);
     next(false);
   } else if (!to.name) {
-    // store.commit('setDownloadPopup', { show: true });
+    store.commit('setDownloadPopup', { show: true });
     next(false);
   } else {
     NProgress.start();
     if (to.name === 'relation') {
-      // store.commit('setNavTheme', 'dark');
+      store.commit('setNavTheme', 'dark');
     } else {
-      // store.commit('setNavTheme', 'light');
+      store.commit('setNavTheme', 'light');
     }
     setNav(to, from);
     setCookie(to, from);
