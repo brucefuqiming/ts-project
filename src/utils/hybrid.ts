@@ -6,9 +6,8 @@
  * @method registerShareData
  */
 
-import wechart from './wechart';
+import wechart , { ShareInfo } from './wechart';
 import diamond from './diamond';
-import { ShareInfo } from './wechart';
 
 export default {
   /**

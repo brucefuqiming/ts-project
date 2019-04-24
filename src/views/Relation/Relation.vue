@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
+import { Component, Vue, Prop, Watch, Emit, Model, Provide, Inject } from 'vue-property-decorator';
 import Network from '../../components/dls-network/marbleNetwork.vue';
 import InfoBox from '../../components/dls-network/infoBox/infoBox.vue';
 import RelationList from '../../components/relationList/relationList.vue';
@@ -37,6 +37,13 @@ import StringUtil from '@/utils/stringUtil';
 import hybrid from '@/utils/hybrid';
 import App from '@/App.vue';
 import { Route } from 'vue-router';
+import { setTheme } from '_colors@1.3.3@colors';
+Component.registerHooks([
+  'beforeRouteEnter',
+  'beforeRouteLeave',
+  'beforeRouteUpdate', // for vue-router 2.2+
+]);
+
 @Component({
   components: {
     Network,

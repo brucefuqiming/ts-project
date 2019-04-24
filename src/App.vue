@@ -47,6 +47,7 @@ export default class App extends Vue {
     // this.$message.success('成功了');
     this.resizeApp();
   }
+
   public  specialEventTrack(url: string) {
     // this.$eventTrack.sendTracking();
     const params: any = getUrlQueryMessage(url) || {};

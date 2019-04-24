@@ -58,6 +58,10 @@ export default class Article extends Vue {
   public routeChange(ro: Route, from: Route) {
     this.$setTitle(this.title + '_文章');
   }
+  public validate() {
+    return false;
+  }
+
   public mounted() {
     // const Dom = document.querySelector('#aricleDetail') as HTMLDivElement;
     // Dom.innerHTML = '';

@@ -8,10 +8,6 @@ import GlobalService from '../services/GlobalService';
 
 // console.log(navigator.userAgent)
 // new VConsole()
-export interface WeChartInterface {
-  setConfig(jsApiList: string[]): Promise<{}>;
-  setShareInfo(info: ShareInfo): void;
-}
 
 export interface ShareInfo {
   title?: string;
@@ -21,7 +17,7 @@ export interface ShareInfo {
   success?: () => void;
 }
 
-class WeChart implements WeChartInterface {
+class WeChart {
   constructor() {
 
     if (navigator.userAgent.indexOf('MicroMessenger') < 0) {
@@ -79,5 +75,8 @@ if (!window.wechart) {
   window.wechart = new WeChart();
 }
 
+export {
+  WeChart,
+};
 
 export default window.wechart;

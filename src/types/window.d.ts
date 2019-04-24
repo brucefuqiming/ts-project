@@ -2,13 +2,13 @@
 // declare var window:Window;
 
 import {EventTracking} from '../components/eventtracking';
-import {WeChartInterface} from '../utils/wechart';
+import {WeChart} from '../utils/wechart';
 declare global {
   interface Window {
     diamond: any,
     webkit: any,
     _diamond: any,
-    wechart: WeChartInterface,
+    wechart: WeChart,
     EventTracking: EventTracking
   }
 }  
