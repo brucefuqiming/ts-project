@@ -37,7 +37,6 @@ import StringUtil from '@/utils/stringUtil';
 import hybrid from '@/utils/hybrid';
 import App from '@/App.vue';
 import { Route } from 'vue-router';
-import { setTheme } from '_colors@1.3.3@colors';
 Component.registerHooks([
   'beforeRouteEnter',
   'beforeRouteLeave',

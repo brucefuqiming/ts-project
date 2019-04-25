@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import './plugins/vue-photo-preview';
 import vOutsideEvents from 'vue-outside-events';
-import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import './directives';
 import App from './App.vue';
