@@ -24,8 +24,8 @@ import xss from '../utils/xss';
 import StringUtil from '../utils/stringUtil';
 import hybrid from '../utils/hybrid';
 import { Route } from 'vue-router';
-import { ArticleResp } from './interface';
 import { SetDetailPopupPayload } from '../store/mutations';
+import { ArticleResp } from './interface';
 
 @Component({
   components: {

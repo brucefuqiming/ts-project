@@ -53,7 +53,7 @@
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
 @Component
 export default class Infobox extends Vue {
-  @Prop() public node!: object;
+  @Prop() public node!: any;
   @Prop() public link!: any;
   @Prop() public types!: string;
   get linkFormated() {

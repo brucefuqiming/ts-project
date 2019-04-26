@@ -32,7 +32,7 @@ import InfoBox from '../../components/dls-network/infoBox/infoBox.vue';
 import RelationList from '../../components/relationList/relationList.vue';
 
 import EntryService from '../../services/EntryService';
-
+import RelationData from './interface';
 import StringUtil from '@/utils/stringUtil';
 import hybrid from '@/utils/hybrid';
 import App from '@/App.vue';
@@ -51,7 +51,7 @@ Component.registerHooks([
   },
 })
 export default class Relation extends Vue {
-  public title: any = '';
+  public title: string = '';
   public currentNode: any = null;
   public currentLink: any = null;
   public currentType: string = '';
@@ -73,9 +73,7 @@ export default class Relation extends Vue {
   public async mounted() {
     this.$parent.resizeApp();
     if (this.networkId) {
-      const resp = await EntryService.getRelationGragh(this.networkId);
-      console.log(resp);
-
+      const resp: RelationData = await EntryService.getRelationGragh(this.networkId);
       this.title = resp.title;
       this.$setTitle(this.title + '_关系图谱');
       this.relationGraph = resp.relationGraph;
@@ -87,7 +85,6 @@ export default class Relation extends Vue {
         this.setListData();
       });
 
-      console.log('natworkIdresp', resp);
       hybrid.registerShareData({
         title: '全历史 | ' + this.title, // 分享标题
         link: window.location.href, // 分享链接

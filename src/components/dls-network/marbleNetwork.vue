@@ -8,11 +8,12 @@ import NetChart from 'marble-net';
 import DataParser from './dataParser/marbleParser';
 import { b64toBlob } from '@/utils/dataUtil';
 import Relation from '@/views/Relation/Relation.vue';
+import { RelationGraph } from '../../views/Relation/interface';
 @Component
 export default class Network extends Vue {
   @Prop() public nodeDraggable!: boolean;
-  public data: any = { nodes: [], links: [] };
-  public colors: any = [
+  public data: RelationGraph = { nodes: [], links: [] };
+  public colors = [
     '#ff968d',
     '#ffa967',
     '#ffc842',
@@ -26,15 +27,15 @@ export default class Network extends Vue {
     '#9d56ff',
   ];
 
-  public nodeColor: any = 0x56e07b;
-  public nodeHighlightColor: any = 0xff7800;
-  public lineColor: any = 0x75a3e8;
+  public nodeColor = 0x56e07b;
+  public nodeHighlightColor = 0xff7800;
+  public lineColor = 0x75a3e8;
 
   public highLightNodes: any = [];
   public highLightLinks: any = [];
   public currentId: any = null;
-  public minZoom: any = 0.1;
-  public maxZoom: any = 2.0;
+  public minZoom = 0.1;
+  public maxZoom = 2.0;
   public chart: any = null;
   public infoBox: any = null;
   public $parent!: Relation;
@@ -213,7 +214,7 @@ export default class Network extends Vue {
       this.updateFilters({ animTime: 5 });
     }
 
-    public strToHex(hexString: any) {
+    public strToHex(hexString: string) {
       return parseInt(hexString.replace('#', '0x'), 16);
     }
 
@@ -454,6 +455,3 @@ export default class Network extends Vue {
     }
   }
 </script>
-
-<style>
-</style>
