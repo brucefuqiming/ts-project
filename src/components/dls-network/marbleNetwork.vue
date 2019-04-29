@@ -8,11 +8,11 @@ import NetChart from 'marble-net';
 import DataParser from './dataParser/marbleParser';
 import { b64toBlob } from '@/utils/dataUtil';
 import Relation from '@/views/Relation/Relation.vue';
-import { RelationGraph } from '../../views/Relation/interface';
+import { RelationData, RelationGraphData } from '../../views/Relation/interface';
 @Component
 export default class Network extends Vue {
   @Prop() public nodeDraggable!: boolean;
-  public data: RelationGraph = { nodes: [], links: [] };
+  public data: RelationGraphData = { nodes: [], links: [] };
   public colors = [
     '#ff968d',
     '#ffa967',
@@ -57,6 +57,8 @@ export default class Network extends Vue {
         forceCanvas: true,
         nodeDraggable: this.nodeDraggable,
         nodeRender: (node: any, PIXI: any) => {
+          console.log(node);
+
           const graphic = new PIXI.Graphics();
           const style = this.getNodeStyle(node);
           if (this.currentId === node.id) {

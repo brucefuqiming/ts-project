@@ -1,4 +1,4 @@
-export interface  RelationData {
+export interface  RelationGraph {
   active: boolean;
   articleIds: any;
   author: number;
@@ -9,17 +9,16 @@ export interface  RelationData {
   language: string;
   lastEditTime: string;
   lastEditor: number;
-  relationGraph: RelationGraph;
+  relationGraph: RelationGraphData;
   relationItemIds: string[];
   server_type: string;
   title: string;
 }
 
-export interface RelationGraph {
+export interface RelationGraphData {
   links: Link[];
   nodes: RelationNode[];
 }
-
 export interface Link {
   arrowOffsetFromCenter: number;
   arrowWidth: number;
@@ -78,4 +77,33 @@ export interface Formated {
   toName: string;
 }
 
-export default RelationData;
+export interface RelationData {
+  birth: Life;
+  death: Life;
+  disambiguation: string;
+  id: string;
+  imageId: string;
+  imageUrl: string;
+  itemTag: any;
+  itemWeight: number;
+  name: string;
+  priorRelationTypes: string[];
+  relatedPoint: number;
+  relationList: RelationData[];
+  relations: any;
+  summary: string;
+  typePaths: [{name: string, id: string}];
+  workIds: string[];
+  workType: any;
+}
+
+
+interface Life {
+  endAccuracy: string;
+  endNote: string;
+  endTime: string;
+  startAccuracy: string;
+  startNote: string;
+  startTime: string;
+  timeDesc: string;
+}

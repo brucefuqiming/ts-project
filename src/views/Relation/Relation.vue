@@ -32,7 +32,7 @@ import InfoBox from '../../components/dls-network/infoBox/infoBox.vue';
 import RelationList from '../../components/relationList/relationList.vue';
 
 import EntryService from '../../services/EntryService';
-import RelationData from './interface';
+import {RelationData, RelationGraph} from './interface';
 import StringUtil from '@/utils/stringUtil';
 import hybrid from '@/utils/hybrid';
 import App from '@/App.vue';
@@ -73,7 +73,7 @@ export default class Relation extends Vue {
   public async mounted() {
     this.$parent.resizeApp();
     if (this.networkId) {
-      const resp: RelationData = await EntryService.getRelationGragh(this.networkId);
+      const resp = await EntryService.getRelationGragh(this.networkId);
       this.title = resp.title;
       this.$setTitle(this.title + '_关系图谱');
       this.relationGraph = resp.relationGraph;
@@ -192,16 +192,16 @@ export default class Relation extends Vue {
       0.5,
     );
   }
-  public async retriveNode(id: any) {
+  public async retriveNode(id: string) {
     const resp = await EntryService.getRelation(id);
     return resp;
   }
-  public addPath(id: any) {
+  public addPath(id: string) {
     if (this.selectPath.indexOf(id) < 0) {
       this.selectPath.push(id);
     }
   }
-  public removePath(id: any) {
+  public removePath(id: string) {
     const i = this.selectPath.indexOf(id);
     if (i >= 0) {
       this.selectPath.splice(i, 1);

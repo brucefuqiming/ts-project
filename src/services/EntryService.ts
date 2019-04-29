@@ -5,6 +5,7 @@ import {
 
 import htmlparser from '@/utils/htmlparser';
 import xss from '@/utils/xss';
+import { RelationGraph, RelationData } from '@/views/Relation/interface';
 
 const lang = 'cn';
 
@@ -19,10 +20,10 @@ export default {
 
     return postJson('/api/ab_path', opts);
   },
-  getRelation(id = '', language = lang) {
+  getRelation(id = '', language = lang): Promise<RelationData> {
     return getJson(`/api/item/relation/${language}/${id}`);
   },
-  getRelationGragh(id: string, language = lang) {
+  getRelationGragh(id: string, language = lang): Promise<RelationGraph> {
     return getJson(`/api/customRelationGraph/${language}/${id}`);
   },
   getDetail(id = '', language = lang) {
