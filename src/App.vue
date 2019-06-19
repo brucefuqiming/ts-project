@@ -50,6 +50,7 @@ export default class App extends Vue {
 
   public  specialEventTrack(url: string) {
     // this.$eventTrack.sendTracking();
+    console.log(123);
     const params: any = getUrlQueryMessage(url) || {};
     const urlParam = url.replace(/https?:\/\/[^/]*\//gi, '').split('/');
     if (url.indexOf('/family/subIndex') >= 0) {
